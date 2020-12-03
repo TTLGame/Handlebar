@@ -203,3 +203,5 @@ var zodiacs = [
 ];
 module.exports.zodiacs = zodiacs;
 module.exports.emotion = emotions;
+module.exports.products = products;
+module.exports.categories = categories;
