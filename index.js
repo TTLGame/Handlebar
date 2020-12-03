@@ -35,58 +35,12 @@ app.use('/Emotion',Emotion_router);
 
 
 //Question 3
-var data = require('./data.js')
-var products = data.products
-var categories = data.categories
-
-app.get('/samsung',function(req,res){
-    var pos =categories.find((ele)=>{
-        return ele.title === "Samsung"
-        
-    })
-    
-    var context = {
-        products: products.filter((ele)=>{
-            return ele.category == pos.id
-        })
-    }
-    res.locals.foot = "18127143 - Trinh Thanh Long"
-    res.render('product',context)
-})
-
-app.get('/sony',function(req,res){
-    var pos =categories.find((ele)=>{
-        return ele.title === "Sony"
-        
-    })
-    
-    var context = {
-        products: products.filter((ele)=>{
-            return ele.category == pos.id
-        })
-    }
-    res.locals.foot = "18127143 - Trinh Thanh Long"
-
-    res.render('product',context)
-})
-app.get('/panasonic',function(req,res){
-    var pos =categories.find((ele)=>{
-        return ele.title === "Panasonic"
-        
-    })
-    
-    var context = {
-        products: products.filter((ele)=>{
-            return ele.category == pos.id
-        })
-    }
-    res.locals.foot = "18127143 - Trinh Thanh Long"
-
-    res.render('product',context)
-})
+var Product_router = require('./routes/task3')
+app.use('/Product',Product_router)
 //Question 4
 var Zodiac_router = require('./routes/task4')
 app.use('/Zodiac',Zodiac_router);
+
 app.listen(app.get('port'),function(){
     console.log("Listenning "+ app.get('port'));
 });
