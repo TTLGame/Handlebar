@@ -1,0 +1,22 @@
+{
+  "name": "handlebar",
+  "version": "1.0.0",
+  "description": "Handlebar",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TTLGame/Handlebar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TTLGame/Handlebar/issues"
+  },
+  "homepage": "https://github.com/TTLGame/Handlebar#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
