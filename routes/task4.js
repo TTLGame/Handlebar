@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var data = require('../data');
+var data_read = require('../data');
+var data = data_read.zodiacs;
 router.get('/',function(req,res){
     res.render('Zodiac');
 })

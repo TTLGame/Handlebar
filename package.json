@@ -22,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/TTLGame/Handlebar/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/TTLGame/Handlebar#readme"
+=======
+  "homepage": "https://github.com/TTLGame/Handlebar#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "nodemon": "^2.0.6"
+  }
+>>>>>>> 032dbe9d9e59a800bcecded5e0a4e40b9365b8c5
 }
