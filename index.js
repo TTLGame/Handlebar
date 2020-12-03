@@ -27,7 +27,30 @@ app.get('/',function(req,res){
     res.sendfile('index.htm'); 
 
 })
+//Question 1
+app.get('',function(req,res){
+    res.sendFile(__dirname + '/index.htm');
+    console.log("index");
+})
 
+app.get('/task1.htm',function(req,res){
+    res.sendFile(__dirname + '/task1.htm');
+
+})
+app.get('/Cal', function(req, res) {
+   
+    var Salary = req.query.salary
+    
+    var context = {
+        S : Salary,
+        X5: 5*Salary/100,
+        X10:10*Salary/100,
+        X55:55*Salary/100,
+    }
+
+    res.render('index.hbs', context)
+ 
+});
 
 //Question 2
 var Emotion_router = require('./routes/task2')
