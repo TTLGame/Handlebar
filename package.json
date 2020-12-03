@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/TTLGame/Handlebar#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "nodemon": "^2.0.6"
   }
 }
