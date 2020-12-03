@@ -1,6 +1,9 @@
 var express = require('express')
 var app = express();
-
+var data = require('./data.js')
+var products = data.products
+var categories = data.categories
+var pos_categories = 0
 app.get('/',function(req,res){
     res.sendFile(__dirname +'/index.htm')
 })
@@ -16,14 +19,45 @@ app.engine('hbs',hbs({
 app.set('view engine', 'hbs')
 
 app.get('/samsung',function(req,res){
-    res.render('samsung')
+    var pos =categories.find((ele)=>{
+        return ele.title === "Samsung"
+        
+    })
+    
+    var context = {
+        products: products.filter((ele)=>{
+            return ele.category == pos.id
+        })
+    }
+    
+    res.render('product',context)
 })
 app.get('/sony',function(req,res){
-    res.render('sony')
+    var pos =categories.find((ele)=>{
+        return ele.title === "Sony"
+        
+    })
+    
+    var context = {
+        products: products.filter((ele)=>{
+            return ele.category == pos.id
+        })
+    }
+    res.render('product',context)
 })
 app.get('/panasonic',function(req,res){
-    res.render('panasonic')
+    var pos =categories.find((ele)=>{
+        return ele.title === "Panasonic"
+        
+    })
+    
+    var context = {
+        products: products.filter((ele)=>{
+            return ele.category == pos.id
+        })
+    }
+    res.render('product',context)
 })
-app.listen(5500,function(){
-    console.log("Listening on post 5500")
+app.listen(5000,function(){
+    console.log("Listening on post 5000")
 })

@@ -1,3 +1,4 @@
+
 <div class="container">
         <div class="row">
             <div class="col-md-2">
@@ -9,17 +10,17 @@
             </div>
             <div class="col-md-10">
                 <div id="products" class="row list-group">
-                    <div class="item col-xs-4 col-lg-4" id="TIVI QLED SAMSUNG QA55Q7FAMKXXV">
+                    {{#each products}}
+                    
+                    <div class="item col-xs-4 col-lg-4" id="{{title}}">
                         <div class="thumbnail">
-                            <img class="group list-group-image" src="/images/task3/smart-tv-4k-qled-q7f-01.jpg" alt="">
+                            <img class="group list-group-image" src="/images/{{imagePath}}" alt="">
                             <div class="caption">
-                                <h4 class="group inner list-group-item-heading">TIVI QLED SAMSUNG QA55Q7FAMKXXV</h4>
-                                <p class="group inner list-group-item-text">Product description... Lorem ipsum dolor sit
-                                    amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                    laoreet dolore magna aliquam erat volutpat.</p>
+                                <h4 class="group inner list-group-item-heading">{{title}}</h4>
+                                <p class="group inner list-group-item-text">{{description}}</p>
                                 <div class="row">
                                     <div class="col-xs-12 col-md-6">
-                                        <p class="lead">57,900,000 VNĐ</p>
+                                        <p class="lead">{{price}} VNĐ</p>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
                                         <a class="btn btn-success" href="#">Add to cart</a>
@@ -28,6 +29,8 @@
                             </div>
                         </div>
                     </div>
+                    
+                    {{/each}}
                 </div>
             </div>
         </div>
