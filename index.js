@@ -30,7 +30,7 @@ app.get('/',function(req,res){
 //Question 1
 app.get('',function(req,res){
     res.sendFile(__dirname + '/index.htm');
-    console.log("index");
+
 })
 
 app.get('/task1.htm',function(req,res){

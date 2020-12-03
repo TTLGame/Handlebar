@@ -1,14 +1,4 @@
-<script>
-    function OnLoad(){
-        var Salary =parseInt(localStorage.getItem("salary"))
-        var H2 = document.getElementsByTagName("h2")
-        for (let i=0; i < H2.length;i++){
-            H2[i].innerHTML= 1.0*Math.round(Salary*H2[i].innerHTML * 100) / 100
-        }
-        var PlaceHolder = document.getElementById("salary").setAttribute("placeholder",Salary)
-    }
-</script>
-<body onload="OnLoad()">
+
 
     <!--contain-->
     <div class="container">
@@ -25,7 +15,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="salary">Your salary</label>
                         <div class="col-md-4">
-                            <input id="salary" name="salary" type="number" min="0" placeholder=""
+                            <input id="salary" name="salary" type="number" min="0" placeholder="{{S}}"
                                 class="form-control input-md" required>
                         </div>
                     </div>
@@ -40,12 +30,6 @@
 
                 </fieldset>
             </form>
-            <script>
-                   function Myfunction(){
-                    var Salary = document.getElementById("salary").value
-                    localStorage.setItem('salary', Salary);
-                   }       
-            </script>
 
         </div>
         <div class="container text-center">
@@ -99,11 +83,3 @@
             </div>
         </div>
     </div>
-    <!-- /contain -->
-    <!--footer-->
-
-
-    <!--/footer-->
-
-  
-</body>
