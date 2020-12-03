@@ -1,19 +1,15 @@
-<body>
-    <!--header-->
-    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="/index.htm"><span class="glyphicon glyphicon-home"></span> Home</a>
-                </li>
-                <li><a href="/task1.htm">1. Jars Saving</a></li>
-                <li><a href="/task2.htm">2. Inspiring Quotes</a></li>
-                <li><a href="/task3.htm">3. TV Sales</a></li>
-                <li><a href="/task4.htm">4. Zodiac Characteristics</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!--/header-->
+<script>
+    function OnLoad(){
+        var Salary =parseInt(localStorage.getItem("salary"))
+        var H2 = document.getElementsByTagName("h2")
+        for (let i=0; i < H2.length;i++){
+            H2[i].innerHTML= 1.0*Math.round(Salary*H2[i].innerHTML * 100) / 100
+        }
+        var PlaceHolder = document.getElementById("salary").setAttribute("placeholder",Salary)
+    }
+</script>
+<body onload="OnLoad()">
+
     <!--contain-->
     <div class="container">
         <div class="page-header">
@@ -34,16 +30,22 @@
                         </div>
                     </div>
 
-                    <!-- Button -->
+                   <!-- Button -->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="submit"></label>
                         <div class="col-md-4">
-                            <input type="submit" value="Calculate" class="btn btn-primary" />
+                            <input type="submit" value="Calculate" class="btn btn-primary" onclick="Myfunction()" />
                         </div>
                     </div>
 
                 </fieldset>
             </form>
+            <script>
+                   function Myfunction(){
+                    var Salary = document.getElementById("salary").value
+                    localStorage.setItem('salary', Salary);
+                   }       
+            </script>
 
         </div>
         <div class="container text-center">
@@ -59,7 +61,7 @@
                     <div>
                         <img src="./images/task1/ffa.jpeg" alt="Texto Alternativo" class="img-circle img-thumbnail">
                         <h3>Financial freedom account <small>10%</small></h3>
-                        <h2 class="jars">{{X10}}</h2>
+                        <h2 class="jars">{{X10}}  </h2>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -99,8 +101,9 @@
     </div>
     <!-- /contain -->
     <!--footer-->
-    <footer class="container-fluid text-center">
-        Copyright &copy; 2020 by 18127141 - Tran Phi Long
-    </footer>
+
+
     <!--/footer-->
+
+  
 </body>

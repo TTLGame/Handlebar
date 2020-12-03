@@ -50,13 +50,18 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="submit"></label>
                         <div class="col-md-4">
-                            <input type="submit" value="Calculate" class="btn btn-primary" />
+                            <input type="submit" value="Calculate" class="btn btn-primary" onclick="Myfunction()" />
                         </div>
                     </div>
 
                 </fieldset>
             </form>
-
+            <script>
+                function Myfunction(){
+                 var Salary = document.getElementById("salary").value
+                 localStorage.setItem('salary', Salary);
+                }       
+            </script>
         </div>
         <div class="container text-center">
             <div class="row stylish-panel">
