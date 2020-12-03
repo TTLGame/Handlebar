@@ -11,7 +11,7 @@ app.use(express.static(__dirname))
 var hbs = require('express-handlebars')
 app.engine('hbs',hbs({
     extname: 'hbs',
-    defaultLayout: 'task3',
+    defaultLayout: 'layout',
     layoutsDir: __dirname + '/views/layouts',
     partialsDir: __dirname + '/views/partials'
 }))
