@@ -5,7 +5,7 @@ var footer = function (Name)
 {
     return Name;
 }
-
+console.log('long')
 app.use(express.static(__dirname ));
 var hbs = require('express-handlebars');
 app.engine('hbs',hbs({
@@ -40,7 +40,6 @@ app.get('/task1.htm',function(req,res){
 app.get('/Cal', function(req, res) {
    
     var Salary = req.query.salary
-    
     var context = {
         S : Salary,
         X5: 5*Salary/100,
